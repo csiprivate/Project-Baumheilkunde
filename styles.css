@@ -138,7 +138,7 @@ ul {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 32px;
   margin-top: 32px;
 }
@@ -190,6 +190,12 @@ ul {
   padding: 18px;
   box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-4px);
 }
 
 .hero-card blockquote {
@@ -309,6 +315,12 @@ ul {
   background: linear-gradient(135deg, rgba(47, 93, 58, 0.08), rgba(216, 162, 78, 0.14));
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 46px rgba(24, 45, 32, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -362,7 +374,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(10, 20, 14, 0.45), rgba(10, 20, 14, 0.75));
+  background: linear-gradient(180deg, rgba(10, 20, 14, 0.45), rgba(10, 20, 14, 0.78));
 }
 
 .card.photo-card .overlay-text {
@@ -447,6 +459,45 @@ textarea {
 .small {
   font-size: 13px;
   color: var(--muted);
+}
+
+.bento-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.bento-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 12px;
+  color: #fdfdfd;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-card h3 {
+  margin: 0 0 6px;
+  color: #f7e3c6;
+  font-size: 24px;
+}
+
+.bento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .footer {
