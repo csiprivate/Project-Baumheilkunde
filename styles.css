@@ -68,7 +68,7 @@ ul {
 
 .nav-bar {
   position: relative;
-  z-index: 2;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -493,7 +493,7 @@ textarea {
     min-width: 210px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     display: none;
-    z-index: 3;
+    z-index: 60;
   }
 
   .nav-links a {
